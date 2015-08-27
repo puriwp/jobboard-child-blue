@@ -1,24 +1,10 @@
-<?php
-
-?>
-
 <div id="refine-resume">
-
-  <?php
-
-    $permalink = get_permalink();
-    $action_url = $permalink . '/resume-listing/';
-
-  ?>
-
-  <form id="resume-search-form" action="<?php echo $action_url; ?>" method="get">
+  <form id="resume-search-form" action="<?php echo esc_url( jobboard_get_permalink( 'resume_search' ) ); ?>" method="get">
 
     <div class="row">
-
       <div class="col-md-6">
 
         <div class="row">
-
           <div class="col-md-12">
             <h3 class="uppercase field-title"><?php echo __('Search Resumes', 'jobboard'); ?></h3>
           </div>
@@ -247,7 +233,7 @@
               <label for="resume_search_experience"><?php echo __('Experience', 'jobboard'); ?></label>
               <input type="text" id="resume_search_experience" name="resume_search_experience" class="form-control" value="<?php echo $typed_experience; ?>" />
 
-              <input type="text" data-slider-values="1,5,10,15,20,25,30,35,40" data-slider="true" value="" />
+              <input type="text" class="slider" data-slider-values="1,5,10,15,20,25,30,35,40" data-slider="true" value="" />
 
             </div><!-- /.form-group -->
           </div><!-- /.col-md-6 -->

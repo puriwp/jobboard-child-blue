@@ -25,7 +25,7 @@ add_action( 'after_setup_theme', 'jobboard_child_setup', 15 );
 function jobboard_child_scripts(){
 
 	// Check the homepage active or not, then execute the javascript
-	if( is_page_template( 'page-templates/template-homepage-alt.php' ) ){
+	if( is_page_template( 'page-templates/template-homepage.php' ) ){
 
 		// jQuery Simple Slider
 		wp_enqueue_script( 'simple-slider', get_template_directory_uri().'/assets/js/simple-slider.min.js', array( 'jquery' ), '1.0.0', true  );
